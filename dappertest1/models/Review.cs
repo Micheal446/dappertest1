@@ -1,0 +1,17 @@
+﻿using dappertest1.models;
+
+namespace DapperVideoGameDbNormalized.Models
+{
+    public class Review
+    {
+        public int Id { get; set; }
+        public int VideoGameId { get; set; }
+        public required string ReviewerName { get; set; }
+        public required string Content { get; set; }
+        public int Rating { get; set; }
+
+        // Navigation property
+        public videogame? VideoGame { get; set; }
+    }
+
+}
